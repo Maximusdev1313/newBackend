@@ -13,6 +13,7 @@ class StudentsViewSet(ModelViewSet):
         pusher_client.trigger('TweetMax-development', 'massage', {
             'name': request.data['name'],
             'massage': request.data['massage'],
+            'date': request.data['date']
         })
         return Response([])
 
